@@ -1,0 +1,195 @@
+//BRAYAN ALEXIS ROJAS MILA
+//31/10202
+//UNION DE PROGRAMAS
+
+#include <stdio.h>
+
+int main()
+{
+int op,mo=0;
+    printf("\tBIENVENIDO A LOS PROGRAMAS REALIZADOS EN C\n");
+    printf ("\tELIGE UNA OPCION DEL PROGRAMA QUE DESEAS REALIZAR\n");
+    while (mo==0)
+{
+		system("color 0F");
+    printf("\n1.FIGURAS CON ASTERISCOS \n2.VALOR DE PI \n3.SERIES \n4.DIAMANTE \n");
+
+    printf("¿QUE PRGRAMA GUSTAS REALIZAR?: ");
+    scanf("%i",&op);
+    system("cls");
+
+//ASTERISCOS
+if(op==1)
+{
+	system("color 03");
+       int A, L, E;
+    int na=1; //NUMERO DE ASTERISCOS
+    int ne=4; //NUMERO DE ESPACIOS
+    int ia=2; //INCREMENTO DE ASTERISCOS
+    int ie=-1; //INCREMENTO DE ESPACIOS
+    printf ("1)\n");
+    for (A=1;A<=10;A++)
+    {
+        for (E=1;E<=A;E++)
+        {
+            printf ("*");
+        }
+        printf ("\n");
+    }
+    printf ("2)\n");
+    for (A=1;A<=10;A++)
+    {
+        for (E=A;E<=10;E++)
+        {
+            printf ("*");
+        }
+        printf ("\n");
+    }
+    printf ("3)\n");
+    for (A=1;A<=10;A++)
+    {
+        for (L=2;L<=A;L++)
+        {
+            printf (" ");
+        }
+        for (E=10;E>=A;E--)
+        {
+            printf ("*");
+        }
+        printf ("\n");
+    }
+    printf ("4)\n");
+    for (A=1;A<=10;A++)
+    {
+        for (L=9;L>=A;L--)
+        {
+            printf(" ");
+        }
+        for (E=1;E<=A;E++)
+        {
+            printf("*");
+        }
+        printf ("\n");
+    }
+    system ("PAUSE");
+    return 0;
+}
+
+//PI
+    else if(op==2)
+{
+	system("color 01");
+ int i,v , j = 1;
+        double pi = 0, spi;
+        printf("INGRESA EL NUMERO DE VALORES: ");
+        scanf("%d",&v);
+        for (i=0;i<v;i++)
+        {
+          spi=4/(double)j;
+               if (i % 2 == 1)
+               {
+                  pi-=spi;
+               }
+               else
+               {
+                   pi+=spi;
+               }
+          j += 2;
+        }
+    printf("El valor de Pi es: %.16f", pi);
+    system ("PAUSE");
+    return 0;
+}
+//SERIES
+    else if(op==3)
+{
+	system("color 02");
+    int Z, B, R, A, Y;
+        printf ("ESCRIBE EL NUMERO DE VECES EN QUE QUIERES IMPRIMIR LA SERIE \n");
+        scanf ("%d",&Z);
+        B=1;
+        R=1;
+        A=1;
+        Y=1;
+    printf ("\nPrimera serie:\n");
+    while (B<=Z)
+    {
+        int n=-1;
+        for (B=1;B<=Z;B++)
+        {
+            n=n+2;
+            printf ("%d, ",n);
+        }
+    }
+    printf ("\nSegunda serie:\n");
+    while (R<=Z)
+    {
+        int n=2;
+        for (R=1;R<=Z;R++)
+        {
+            n=n*1+3;
+
+            printf ("%d, ",n);
+        }
+    }
+    printf ("\nTercera serie:\n");
+    while (A<=Z)
+    {
+        int n=40;
+        for (A=1;A<=Z;A++)
+        {
+            n=n-10;
+            printf ("%d, ",n);
+        }
+    }
+    printf ("\nCuarta Serie:\n");
+    while (Y<=Z)
+    {
+        int n=7;
+        for (Y=1;Y<=Z;Y++)
+        {
+            n=n+8;
+            printf ("%d, ",n);
+        }
+    }
+    system ("PAUSE");
+    return 0;
+ }
+
+ //DIAMANTE
+else if(op==4)
+{
+       int na=1; //NUMERO DE ASTERISCOS
+    int ne=4; //NUMERO DE ESPACIOS
+    int ia=2; //INCREMENTO DE ASTERISTICOS
+    int ie=-1; //INCREMENTO DE ESPACIOS
+
+    for (int r=1;r<=9;r++)//FOR DE RENGLONES
+    {
+        for (int e=1;e<=ne;e++) //FOR DE ESPACIOS
+        {
+            printf (" ");
+        }
+        for (int a=1;a<=na;a++)//FOR DE ASTERISCOS
+        {
+            printf ("*");
+        }
+        printf ("\n");
+        if (r==5)
+        {
+            ia=-2;
+            ie=1;
+        }
+        ne=ne+ie;
+        na=na+ia;
+    }
+    system ("PAUSE");
+    return 0;
+}
+    {
+        printf ("\n SI QUIERES PROBAR OTRO PROGRAMA INGREA 9 \n SI NO INGRESA CUALQUIER OTRO NUMERO ");
+        scanf ("%d", &mo);
+        system ("cls");
+    }
+}
+}
